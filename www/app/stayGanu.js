@@ -4,7 +4,10 @@
 
     angular.module('stayGanu', [
         'stayGanu.core',
-        'stayGanu.config'
+        'stayGanu.config',
+
+        // App Modules
+        'homestay'
     ]);
 
     angular.module('stayGanu.core', [
