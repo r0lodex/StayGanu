@@ -6,7 +6,8 @@
 
     // ===============================
 
-    function homestayCtrl($scope) {
+    function homestayCtrl($scope, Homestay) {
         var vm = this
+        vm.items = Homestay.getAll({ file: 'homestay.list.json' })
     }
 })();

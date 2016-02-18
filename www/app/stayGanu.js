@@ -11,7 +11,8 @@
     ]);
 
     angular.module('stayGanu.core', [
-        'ionic'
+        'ionic',
+        'ngResource'
     ]);
 
 })();

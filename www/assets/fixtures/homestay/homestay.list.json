@@ -1,0 +1,97 @@
+[
+  {
+    "_id": "56c60405136f48cfabdbbadb",
+    "guid": "d3a0bb1c-5777-4c6c-a042-81d11889b84b",
+    "status": {
+      "text": "Occupied"
+    },
+    "name": "Homestay Rantau Abang",
+    "images": [
+      "assets/img/homestayplaceholder.png",
+      "assets/img/homestayplaceholder.png"
+    ],
+    "user": {
+      "id": "2fe1d6ae-b242-4542-b465-09df16376689",
+      "avatar": "assets/img/mcfly.jpg",
+      "name": "Audrey Bird",
+      "company": "CAPSCREEN"
+    },
+    "description": "Non do deserunt magna consectetur fugiat ex Lorem esse dolor anim id labore reprehenderit. Sunt consectetur dolor in sunt nisi dolor nostrud minim laborum duis non excepteur. Ex elit adipisicing voluptate mollit ut proident amet mollit officia nulla est exercitation.\r\n"
+  },
+  {
+    "_id": "56c6040509d18c4c3e90a4a7",
+    "guid": "105bc602-913b-489c-95f0-444cf6628614",
+    "status": {
+      "text": "Vacant"
+    },
+    "name": "Homestay Kampung Tunku",
+    "images": [
+      "assets/img/homestayplaceholder.png",
+      "assets/img/homestayplaceholder.png"
+    ],
+    "user": {
+      "id": "236de81b-98fc-4af5-a5b8-44ed3cd57fa2",
+      "avatar": "assets/img/mcfly.jpg",
+      "name": "Mills Kane",
+      "company": "BOILICON"
+    },
+    "description": "Adipisicing quis qui eu magna id ad occaecat magna officia laborum Lorem. Sit excepteur consectetur esse velit sunt anim commodo ex aliquip nulla aliquip esse. Sit enim exercitation sit duis tempor incididunt minim ipsum amet sit quis aute deserunt.\r\n"
+  },
+  {
+    "_id": "56c60405c1b3559fb366b32f",
+    "guid": "bd832df4-aafe-4169-b7d0-79c7cb531a6b",
+    "status": {
+      "text": "Vacant"
+    },
+    "name": "Homestay Ganu Kite",
+    "images": [
+      "assets/img/homestayplaceholder.png",
+      "assets/img/homestayplaceholder.png"
+    ],
+    "user": {
+      "id": "63748879-7a9e-4120-a52c-9fa3ab1fd350",
+      "avatar": "assets/img/mcfly.jpg",
+      "name": "Adriana Mathis",
+      "company": "DUFLEX"
+    },
+    "description": "Exercitation Lorem duis est ullamco. Aute culpa consequat in dolor elit occaecat voluptate enim deserunt labore. Consectetur minim proident ullamco aute nostrud in laboris incididunt adipisicing quis pariatur commodo labore consequat. Dolore veniam enim eu tempor non labore occaecat qui.\r\n"
+  },
+  {
+    "_id": "56c604059f3978c2a22d59c9",
+    "guid": "2d8c1ca0-a0ca-4e25-b6f9-64d441c66108",
+    "status": {
+      "text": "Vacant"
+    },
+    "name": "Homestay Ganu Kite",
+    "images": [
+      "assets/img/homestayplaceholder.png",
+      "assets/img/homestayplaceholder.png"
+    ],
+    "user": {
+      "id": "5edfa159-e46c-418c-90b5-5fe7516280bd",
+      "avatar": "assets/img/mcfly.jpg",
+      "name": "Gray Norton",
+      "company": "GLASSTEP"
+    },
+    "description": "Quis ullamco ad ea consequat nostrud occaecat proident nisi irure enim consequat consequat. Nostrud irure aute et sint. Dolore proident voluptate mollit et esse ullamco fugiat proident ea nulla tempor. Sit elit cupidatat nulla irure veniam ut exercitation laborum consequat tempor elit.\r\n"
+  },
+  {
+    "_id": "56c60405ddedc83945c3d94b",
+    "guid": "cf5a46fa-5e3e-4b73-b006-67c6ca41e605",
+    "status": {
+      "text": "Vacant"
+    },
+    "name": "Homestay Rantau Abang",
+    "images": [
+      "assets/img/homestayplaceholder.png",
+      "assets/img/homestayplaceholder.png"
+    ],
+    "user": {
+      "id": "320e5c6a-13cf-4399-ae77-f4e391268cbd",
+      "avatar": "assets/img/mcfly.jpg",
+      "name": "Valeria Cantrell",
+      "company": "QUARX"
+    },
+    "description": "Tempor in irure nulla commodo occaecat mollit sit cillum duis non laboris pariatur cupidatat. Ipsum excepteur duis nulla pariatur. Nostrud laboris elit velit enim fugiat dolor quis ad exercitation excepteur culpa in aliquip. Velit aliquip ullamco esse exercitation voluptate officia incididunt duis adipisicing voluptate reprehenderit Lorem. Et deserunt esse ut mollit enim quis sunt amet eiusmod adipisicing ullamco aute sit enim. Dolore nulla ipsum ullamco sint eiusmod enim Lorem non laboris. Officia laborum adipisicing cillum ullamco ullamco non ea.\r\n"
+  }
+]
