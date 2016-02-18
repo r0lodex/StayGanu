@@ -1,23 +1,27 @@
 <ion-view view-title="Homestay">
     <ion-content class="padding">
-        <div class="list card" ng-repeat="h in homestay.items">
-            <div class="item item-avatar">
-                <img ng-src="{{ h.user.avatar }}">
-                <h2><strong><a href="#" ng-bind="h.user.name"></a></strong></h2>
-                <p ng-bind="h.user.company"></p>
-            </div>
+        <div class="row responsive-lg">
+            <div class="col col-33" ng-repeat="h in homestay.items">
+                <div class="list card">
+                    <div class="item item-avatar">
+                        <img ng-src="{{ h.user.avatar }}">
+                        <h2><strong><a href="#" ng-bind="h.user.name"></a></strong></h2>
+                        <p ng-bind="h.user.company"></p>
+                    </div>
 
-            <div class="item item-body">
-                <img class="full-image" ng-src="{{ h.images[0] }}">
-                <p>
-                    <strong ng-bind="h.name"></strong><hr>
-                    <small ng-bind="h.description"></small>
-                </p>
-                <p>
-                    <button class="button button-block button-positive">
-                        View Details
-                    </button>
-                </p>
+                    <div class="item item-body">
+                        <img class="full-image" ng-src="{{ h.images[0] }}">
+                        <p>
+                            <strong ng-bind="h.name"></strong><hr>
+                            <small ng-bind="h.description"></small>
+                        </p>
+                        <p>
+                            <button class="button button-block button-positive">
+                                View Details
+                            </button>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </ion-content>
