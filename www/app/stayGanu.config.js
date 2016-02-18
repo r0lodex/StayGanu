@@ -25,11 +25,11 @@
         $stateProvider
             .state('homestay', {
                 url: '/',
-                templateUrl: 'app/Homestay/templates/list.html',
+                templateUrl: 'app/Homestay/templates/homestay.list.html',
                 controller: 'homestayCtrl',
                 controllerAs: 'homestay'
             })
 
         $urlRouterProvider.otherwise('/')
-    }
+    };
 })();

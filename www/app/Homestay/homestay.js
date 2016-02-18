@@ -6,5 +6,7 @@
 
     // ===============================
 
-    function homestayCtrl() {}
+    function homestayCtrl($scope) {
+        var vm = this
+    }
 })();
