@@ -19,21 +19,28 @@
         <script src="app/stayGanu.js"></script>
         <script src="app/stayGanu.config.js"></script>
 
-        <!-- App Modules -->
+        <!-- Homestay Module -->
         <script src="app/Homestay/homestay.js"></script>
+        <script src="app/Homestay/homestay.routes.js"></script>
         <script src="app/Homestay/homestay.factory.js"></script>
+
+        <!-- Profile Module -->
+        <script src="app/Profile/profile.js"></script>
+        <script src="app/Profile/profile.routes.js"></script>
+
     </head>
     <body ng-app="stayGanu">
         <ion-nav-bar class="bar-positive">
             <ion-nav-back-button></ion-nav-back-button>
         </ion-nav-bar>
 
-        <ion-nav-view></ion-nav-view>
-
         <ion-tabs class="tabs-dark tabs-icon-top">
-            <ion-tab title="Homestay" icon-on="ion-ios-home" icon-off="ion-ios-home-outline"></ion-tab>
-            <ion-tab title="Profile" icon-on="ion-ios-person" icon-off="ion-ios-person-outline"></ion-tab>
-            <ion-tab title="About" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline"></ion-tab>
+            <ion-tab title="Homestay" icon-on="ion-ios-home" ui-sref="homestay" icon-off="ion-ios-home-outline">
+                <ion-nav-view name="homestay-tab"></ion-nav-view>
+            </ion-tab>
+            <ion-tab title="My Profile" icon-on="ion-ios-person" ui-sref="profile" icon-off="ion-ios-person-outline">
+                <ion-nav-view name="profile-tab"></ion-nav-view>
+            </ion-tab>
         </ion-tabs>
     </body>
 </html>

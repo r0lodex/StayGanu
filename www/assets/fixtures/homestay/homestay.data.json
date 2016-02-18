@@ -1,0 +1,19 @@
+{
+    "_id": "56c60405136f48cfabdbbadb",
+    "guid": "d3a0bb1c-5777-4c6c-a042-81d11889b84b",
+    "status": {
+      "text": "Occupied"
+    },
+    "name": "Homestay Rantau Abang",
+    "images": [
+      "assets/img/homestayplaceholder.png",
+      "assets/img/homestayplaceholder.png"
+    ],
+    "user": {
+      "id": "2fe1d6ae-b242-4542-b465-09df16376689",
+      "avatar": "assets/img/mcfly.jpg",
+      "name": "Audrey Bird",
+      "company": "CAPSCREEN"
+    },
+    "description": "Non do deserunt magna consectetur fugiat ex Lorem esse dolor anim id labore reprehenderit. Sunt consectetur dolor in sunt nisi dolor nostrud minim laborum duis non excepteur. Ex elit adipisicing voluptate mollit ut proident amet mollit officia nulla est exercitation.\r\n"
+}

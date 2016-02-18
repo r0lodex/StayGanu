@@ -2,8 +2,7 @@
     'use strict';
     angular
         .module('stayGanu.config', [])
-        .run(StartUp)
-        .config(Routes)
+        .run(StartUp);
 
     // ===============================
 
@@ -19,17 +18,5 @@
                 StatusBar.styleDefault();
             }
         })
-    };
-
-    function Routes($stateProvider, $urlRouterProvider) {
-        $stateProvider
-            .state('homestay', {
-                url: '/',
-                templateUrl: 'app/Homestay/templates/homestay.list.html',
-                controller: 'homestayCtrl',
-                controllerAs: 'homestay'
-            })
-
-        $urlRouterProvider.otherwise('/')
     };
 })();

@@ -7,7 +7,8 @@
         'stayGanu.config',
 
         // App Modules
-        'homestay'
+        'homestay',
+        'profile'
     ]);
 
     angular.module('stayGanu.core', [
