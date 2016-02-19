@@ -1,28 +1,22 @@
 <ion-view view-title="Homestay">
     <ion-content class="padding">
-        <!-- <div class="row responsive-lg"> -->
-            <div ng-repeat="h in homestay.items">
-                <div class="list card">
-                    <!-- <div class="item item-avatar">
-                        <img ng-src="{{ h.user.avatar }}">
-                        <h2><strong><a href="#" ng-bind="h.user.name"></a></strong></h2>
-                        <p ng-bind="h.user.company"></p>
-                    </div> -->
-
-                    <div class="item item-body">
-                        <img class="full-image" ng-src="{{ h.images[0] }}">
-                        <p class="center">
-                            <strong ng-bind="h.name"></strong>
-                            <!-- <small ng-bind="h.description"></small> -->
-                        </p>
-                        <p>
-                            <a ui-sref="homestay.detail({ id: h._id })" class="button button-block button-small button-calm">
-                                View Details
-                            </a>
-                        </p>
-                    </div>
-                </div>
-        <!--     </div>
-        </div> -->
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="text" placeholder="Search Homestay" ng-model="homestay.keyword">
+            </label>
+        </div>
+        <small>Displaying {{ homestay.filter.length }} homestay</small>
+        <a style="display: block"
+            ui-sref="homestay.detail({ id: h._id })" class="list card"
+            ng-repeat="h in homestay.filter = (homestay.items | filter: { name: homestay.keyword })">
+            <img class="full-image" ng-src="{{ h.images[0] }}">
+            <div class="item item-body">
+                <strong ng-bind="h.name"></strong>
+            </div>
+        </a>
+        <div ng-if="!homestay.filter.length">
+            The keyword <strong>{{ homestay.keyword }}</strong> didn't produce any result.
+        </div>
     </ion-content>
 </ion-view>
