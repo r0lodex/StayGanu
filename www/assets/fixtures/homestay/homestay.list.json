@@ -2,6 +2,8 @@
   {
     "_id": "56c60405136f48cfabdbbadb",
     "guid": "d3a0bb1c-5777-4c6c-a042-81d11889b84b",
+    "rating": 4,
+    "location": "Kuala Terengganu",
     "status": {
       "text": "Occupied"
     },
@@ -21,6 +23,8 @@
   {
     "_id": "56c6040509d18c4c3e90a4a7",
     "guid": "105bc602-913b-489c-95f0-444cf6628614",
+    "rating": 2,
+    "location": "Kuala Terengganu",
     "status": {
       "text": "Vacant"
     },
@@ -40,6 +44,8 @@
   {
     "_id": "56c60405c1b3559fb366b32f",
     "guid": "bd832df4-aafe-4169-b7d0-79c7cb531a6b",
+    "rating": 3,
+    "location": "Kuala Terengganu",
     "status": {
       "text": "Vacant"
     },
@@ -59,6 +65,8 @@
   {
     "_id": "56c604059f3978c2a22d59c9",
     "guid": "2d8c1ca0-a0ca-4e25-b6f9-64d441c66108",
+    "rating": 5,
+    "location": "Kuala Terengganu",
     "status": {
       "text": "Vacant"
     },
@@ -78,6 +86,8 @@
   {
     "_id": "56c60405ddedc83945c3d94b",
     "guid": "cf5a46fa-5e3e-4b73-b006-67c6ca41e605",
+    "rating": 1,
+    "location": "Kuala Terengganu",
     "status": {
       "text": "Vacant"
     },

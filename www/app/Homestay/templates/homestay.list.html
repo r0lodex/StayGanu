@@ -6,17 +6,29 @@
                 <input type="text" placeholder="Search Homestay" ng-model="homestay.keyword">
             </label>
         </div>
-        <small>Displaying {{ homestay.filter.length }} homestay</small>
+        <small ng-if="homestay.filter.length && homestay.keyword">
+            <strong>{{ homestay.keyword }}</strong> returns {{ homestay.filter.length }} homestay
+        </small>
         <a style="display: block"
             ui-sref="homestay.detail({ id: h._id })" class="list card"
             ng-repeat="h in homestay.filter = (homestay.items | filter: { name: homestay.keyword })">
             <img class="full-image" ng-src="{{ h.images[0] }}">
-            <div class="item item-body">
-                <strong ng-bind="h.name"></strong>
+            <div class="item item-body" style="text-align: center">
+                <strong ng-bind="h.name"></strong><br>
+                <small ng-bind="h.location || 'Terengganu'"></small><br>
+                <span ng-repeat="r in [1,2,3,4,5]">
+                    <i class="energized"
+                       ng-class="{
+                            'ion-android-star-outline': h.rating <= $index,
+                            'ion-android-star': h.rating > $index
+                       }"
+                    >
+                    </i>
+                </span>
             </div>
         </a>
         <div ng-if="!homestay.filter.length">
-            The keyword <strong>{{ homestay.keyword }}</strong> didn't produce any result.
+            No result for <strong>{{ homestay.keyword }}</strong>.
         </div>
     </ion-content>
 </ion-view>
