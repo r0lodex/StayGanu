@@ -1,19 +1,21 @@
 {
-    "_id": "56c60405136f48cfabdbbadb",
-    "guid": "d3a0bb1c-5777-4c6c-a042-81d11889b84b",
+    "_id": "56c6040509d18c4c3e90a4a7",
+    "guid": "105bc602-913b-489c-95f0-444cf6628614",
+    "rating": 2,
+    "location": "Kuala Terengganu",
     "status": {
-      "text": "Occupied"
+      "text": "Vacant"
     },
-    "name": "Homestay Rantau Abang",
+    "name": "Homestay Kampung Tunku",
     "images": [
       "assets/img/homestayplaceholder.png",
       "assets/img/homestayplaceholder.png"
     ],
     "user": {
-      "id": "2fe1d6ae-b242-4542-b465-09df16376689",
+      "id": "236de81b-98fc-4af5-a5b8-44ed3cd57fa2",
       "avatar": "assets/img/mcfly.jpg",
-      "name": "Audrey Bird",
-      "company": "CAPSCREEN"
+      "name": "Mills Kane",
+      "company": "BOILICON"
     },
-    "description": "Non do deserunt magna consectetur fugiat ex Lorem esse dolor anim id labore reprehenderit. Sunt consectetur dolor in sunt nisi dolor nostrud minim laborum duis non excepteur. Ex elit adipisicing voluptate mollit ut proident amet mollit officia nulla est exercitation.\r\n"
-}
+    "description": "Adipisicing quis qui eu magna id ad occaecat magna officia laborum Lorem. Sit excepteur consectetur esse velit sunt anim commodo ex aliquip nulla aliquip esse. Sit enim exercitation sit duis tempor incididunt minim ipsum amet sit quis aute deserunt.\r\n"
+  }

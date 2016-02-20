@@ -1,5 +1,22 @@
 <ion-view view-title="Homestay Detail">
     <ion-content class="padding">
-        {{ homestay.data.name }}
+        <h3>{{ homestay.data.name }}</h3>
+        <p ng-bind="homestay.data.user.company"></p>
+        <p>
+            RM120.00 per night
+            <h3 style="margin: 0">
+                <span ng-repeat="r in [1,2,3,4,5]">
+                    <i class="energized"
+                       ng-class="{
+                            'ion-android-star-outline': homestay.data.rating <= $index,
+                            'ion-android-star': homestay.data.rating > $index
+                       }"
+                    >
+                    </i>
+                </span>
+            </h3>
+        </p>
+        <p ng-bind="homestay.data.description"></p>
+        <img ng-repeat="a in homestay.data.images track by $index" ng-src="{{ a }}" width="100%">
     </ion-content>
 </ion-view>
