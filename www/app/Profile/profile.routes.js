@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular
-        .module('homestay')
+        .module('profile')
         .config(ProfileRoutes)
 
     // ===============================

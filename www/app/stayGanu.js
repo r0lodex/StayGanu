@@ -8,7 +8,8 @@
 
         // App Modules
         'homestay',
-        'profile'
+        'profile',
+        'nearby'
     ]);
 
     angular.module('stayGanu.core', [
