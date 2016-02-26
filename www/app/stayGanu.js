@@ -14,7 +14,9 @@
 
     angular.module('stayGanu.core', [
         'ionic',
-        'ngResource'
+        'ngResource',
+        'uiGmapgoogle-maps',
+        'ngCordova'
     ]);
 
 })();

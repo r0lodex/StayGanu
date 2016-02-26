@@ -20,6 +20,7 @@
             })
             .state('homestay.detail', {
                 url: '/:id',
+                cache: false,
                 views: {
                     'homestay-tab@': {
                         templateUrl: 'app/Homestay/templates/homestay.detail.html',

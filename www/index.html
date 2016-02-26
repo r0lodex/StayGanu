@@ -14,7 +14,12 @@
         <script src="cordova.js"></script>
 
         <!-- Custom Dependencies -->
+        <!-- <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&amp;libraries=places"></script> -->
         <script src="lib/angular-resource/angular-resource.min.js"></script>
+        <script src="lib/lodash/dist/lodash.min.js"></script>
+        <script src="lib/angular-simple-logger/dist/angular-simple-logger.min.js"></script>
+        <script src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
+        <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
 
         <!-- Internal App Modules -->
         <script src="app/stayGanu.js"></script>
@@ -33,7 +38,6 @@
         <script src="app/Nearby/nearby.js"></script>
         <script src="app/Nearby/nearby.routes.js"></script>
 
-        <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&amp;libraries=places"></script>
 
     </head>
     <body ng-app="stayGanu">
@@ -48,7 +52,7 @@
             <ion-tab title="Nearby" icon-on="ion-ios-location" ui-sref="nearby" icon-off="ion-ios-location-outline">
                 <ion-nav-view name="nearby-tab"></ion-nav-view>
             </ion-tab>
-            <ion-tab title="My Profile" icon-on="ion-ios-person" ui-sref="profile" icon-off="ion-ios-person-outline">
+            <ion-tab title="My Stuff" icon-on="ion-ios-albums" ui-sref="profile" icon-off="ion-ios-albums-outline">
                 <ion-nav-view name="profile-tab"></ion-nav-view>
             </ion-tab>
         </ion-tabs>

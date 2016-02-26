@@ -10,7 +10,7 @@
             <strong>{{ homestay.keyword }}</strong> returns {{ homestay.filter.length }} homestay
         </small>
         <a style="display: block"
-            ui-sref="homestay.detail({ id: h._id })" class="list card"
+            ui-sref="homestay.detail({ id: h.id })" class="list card"
             ng-repeat="h in homestay.filter = (homestay.items | filter: { name: homestay.keyword })">
             <img class="full-image" ng-src="{{ h.images[0] }}">
             <div class="item item-body" style="text-align: center">

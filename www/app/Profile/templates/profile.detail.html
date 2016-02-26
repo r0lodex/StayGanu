@@ -1,5 +1,40 @@
-<ion-view view-title="My Profile">
+<ion-view view-title="My Stuff">
     <ion-content class="padding">
-        Profile View
+        <div class="list-card">
+            <div class="item item-avatar">
+                <img src="http://placehold.it/300x300">
+                <h2 ng-bind="profile.data.name"></h2>
+                <p ng-bind="profile.data.email"></p>
+            </div>
+            <div class="item item-body" style="text-align: center">
+                <small>
+                    <a ui-sref="profile.edit" class="subdued">Add Homestay</a>
+                    <a ui-sref="profile.edit" class="subdued">Edit Profile</a>
+                    <a ng-click="profile.logout()" class="subdued">Logout</a>
+                </small>
+            </div>
+        </div>
+
+        <h3 style="text-align: center">My Homestay</h3>
+
+        <a style="display: block"
+            ui-sref="profile.detail({ id: h._id })" class="list card"
+            ng-repeat="h in profile.homestay">
+            <img class="full-image" ng-src="{{ h.images[0] }}">
+            <div class="item item-body" style="text-align: center">
+                <strong ng-bind="h.name"></strong><br>
+                <small ng-bind="h.location || 'Terengganu'"></small><br>
+                <span ng-repeat="r in [1,2,3,4,5]">
+                    <i class="energized"
+                       ng-class="{
+                            'ion-android-star-outline': h.rating <= $index,
+                            'ion-android-star': h.rating > $index
+                       }"
+                    >
+                    </i>
+                </span>
+            </div>
+        </a>
+
     </ion-content>
 </ion-view>

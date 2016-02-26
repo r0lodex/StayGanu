@@ -1,8 +1,23 @@
 <ion-view view-title="Homestay Nearby">
     <ion-content>
         <style>
-            #map {  width: 100%; height: {{ nearby.height }}px; }
+            .scroll { height: 100%; }
+            html, body, #map-canvas {
+                position: relative;
+                height: 100%;
+                width: 100%;
+            }
+            #map-canvas .angular-google-map-container {
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%;
+                height: 100%;
+            }
         </style>
-        <div id="map"></div>
+        <div id="map-canvas">
+            <ui-gmap-google-map center="nearby.map.center" zoom="nearby.map.zoom">
+                <ui-gmap-marker coords="nearby.marker.coords" options="nearby.marker.options" idkey="nearby.marker.id"></ui-gmap-marker>
+            </ui-gmap-google-map>
+        </div>
     </ion-content>
 </ion-view>

@@ -6,53 +6,30 @@
 
     // ===============================
 
-    function nearbyCtrl() {
+    function nearbyCtrl(uiGmapGoogleMapApi, $cordovaGeolocation) {
         var vm = this
-            vm.markers = []
-            vm.height = document.getElementsByClassName('scroll-content')[0].clientHeight
+        vm.markers = []
 
-            console.log(vm.height)
-
-        navigator.geolocation.getCurrentPosition(currPos)
+        $cordovaGeolocation
+            .getCurrentPosition()
+            .then(currPos)
 
         function currPos(r) {
-            var currLoc = { lat: r.coords.latitude, lng: r.coords.longitude }
-            vm.initMap = new google.maps.Map(document.getElementById('map'), {
-                center: currLoc,
-                zoom: 8
-            })
-
-            var service = new google.maps.places.PlacesService(vm.initMap);
-            var infowindow = new google.maps.InfoWindow();
-
-            service.nearbySearch({
-                location: currLoc,
-                radius: 500,
-                type: ['homestay']
-            }, callback);
-
-            function callback(results, status) {
-                if (status === google.maps.places.PlacesServiceStatus.OK) {
-                    for (var i = 0; i < results.length; i++) {
-                        createMarker(results[i]);
-                    }
+            console.log('test')
+            vm.marker = {
+                id: 0,
+                coords: {
+                    latitude: r.coords.latitude,
+                    longitude: r.coords.longitude,
+                },
+                options: { draggable: false }
+            }
+            uiGmapGoogleMapApi.then(function(maps) {
+                vm.map = {
+                    center: vm.marker.coords,
+                    zoom: 10
                 }
-            }
-
-            function createMarker(place) {
-                var placeLoc = place.geometry.location;
-                var marker = new google.maps.Marker({
-                    map: vm.initMap,
-                    position: place.geometry.location,
-                })
-
-                google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.setContent(place.name);
-                    infowindow.open(vm.initMap, this);
-                })
-            }
-
+            })
         }
-
     }
 })();

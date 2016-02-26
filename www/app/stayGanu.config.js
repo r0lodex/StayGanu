@@ -2,9 +2,18 @@
     'use strict';
     angular
         .module('stayGanu.config', [])
+        .factory('$localStorage', $localStorage)
+        .config(GMAP)
         .run(StartUp);
 
     // ===============================
+
+    function GMAP(uiGmapGoogleMapApiProvider) {
+        uiGmapGoogleMapApiProvider.configure({
+            key: 'AIzaSyDePfW-4wa_NWqmQKNWer3-za4T98JUx4o',
+            libraries: 'places'
+        });
+    }
 
     function StartUp($ionicPlatform) {
         $ionicPlatform.ready(function() {
@@ -19,4 +28,15 @@
             }
         })
     };
+
+    function $localStorage($window) {
+        return {
+            set: function(key, value) {
+                $window.localStorage[key] = JSON.stringify(value)
+            },
+            get: function(key, value) {
+                return JSON.parse($window.localStorage[key] || null)
+            }
+        }
+    }
 })();
