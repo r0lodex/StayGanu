@@ -10,7 +10,7 @@
         <h3>{{ homestay.data.name }}</h3>
         <p ng-bind="homestay.data.user.company"></p>
         <p ng-bind="homestay.data.descriptions"></p>
-        <img ng-repeat="a in homestay.data.images track by $index" ng-src="{{ a }}" width="100%">
+        <img ng-repeat="a in homestay.data.images track by $index" ng-src="{{ root.static + a.filename }}" width="100%">
         <div id="map-canvas">
             <ui-gmap-google-map center="homestay.map.center" zoom="homestay.map.zoom">
                 <ui-gmap-marker coords="homestay.marker.coords" options="homestay.marker.options" idkey="homestay.marker.id"></ui-gmap-marker>

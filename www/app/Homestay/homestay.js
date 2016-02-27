@@ -12,8 +12,8 @@
         vm.items = Homestay.getAll()
     }
 
-    function homestayDetailCtrl($stateParams, Homestay, uiGmapGoogleMapApi) {
-        var vm = this
+    function homestayDetailCtrl($stateParams, Homestay, uiGmapGoogleMapApi, CONST) {
+        var vm      = this
         Homestay.getOne({ param: $stateParams.id }, function(response) {
             vm.data = response
             uiGmapGoogleMapApi.then(function(maps) {

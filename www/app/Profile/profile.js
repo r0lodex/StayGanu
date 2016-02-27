@@ -6,7 +6,7 @@
 
     // ===============================
 
-    function profileCtrl($ionicModal, $scope, $localStorage, $state, Homestay) {
+    function profileCtrl($ionicModal, $scope, $localStorage, $state, Homestay, Profile, Auth, CONST) {
         var vm = this
         vm.data         = $localStorage.get('user')
         vm.loginInit    = initLoginModal
@@ -15,7 +15,7 @@
         vm.logout       = logout
         vm.login        = login
         vm.register     = register
-        vm.homestay     = Homestay.getAll({ file: 'homestay.list.json' })
+        vm.homestay     = Homestay.getAll()
 
         if (!vm.data) {
             initRegisterModal()
@@ -45,7 +45,11 @@
 
         function login() {
             if (vm.loginForm.$valid) {
-                // ..
+                Auth.login({
+                    app_secret: CONST.API_KEY,
+                    username: vm.username,
+                    password: vm.password
+                }, loginSuccess, error)
             } else {
 
             }
@@ -54,13 +58,13 @@
         function register() {
             if (vm.registrationForm.$valid) {
                 if (vm.pass == vm.repass) {
-                    $localStorage.set('user', {
-                        name: vm.name,
+                    Profile.register({
+                        action: 'register',
+                        app_secret: CONST.API_KEY,
+                        username: vm.username,
                         email: vm.email,
                         password: vm.pass
-                    })
-                    vm.registerModal.hide()
-                    vm.data = $localStorage.get('user')
+                    }, autoLogin, error)
                 } else {
                     vm.registrationForm.pass.$setValidity('required', false)
                     alert('Password mismatch')
@@ -68,6 +72,14 @@
             } else {
                 console.log('invalid')
             }
+        }
+
+        function autoLogin(res) {
+            Auth.login({
+                app_secret: CONST.API_KEY,
+                username: res.data.username,
+                password: vm.pass
+            }, saveToken, error)
         }
 
         function cancelRegistration() {
@@ -80,4 +92,16 @@
             $state.go('homestay')
         }
     }
+
+    function saveToken(res) {
+        $localStorage.set('user', res.data)
+        if (vm.loginModal) { vm.loginModal.hide() }
+        vm.registerModal.hide()
+        vm.data = $localStorage.get('user')
+    }
+
+    function error(response) {
+        alert(response.data.message)
+    }
+
 })();

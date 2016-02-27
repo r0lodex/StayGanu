@@ -12,7 +12,7 @@
         <a style="display: block"
             ui-sref="homestay.detail({ id: h.id })" class="list card"
             ng-repeat="h in homestay.filter = (homestay.items | filter: { name: homestay.keyword })">
-            <img class="full-image" ng-src="{{ h.images[0] }}">
+            <img class="full-image" ng-src="{{ root.static + h.images[0].filename || 'http://placehold.it/200x100' }}">
             <div class="item item-body" style="text-align: center">
                 <strong ng-bind="h.name"></strong><br>
                 <small ng-bind="h.location || 'Terengganu'"></small><br>

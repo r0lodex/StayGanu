@@ -33,6 +33,7 @@
         <!-- Profile Module -->
         <script src="app/Profile/profile.js"></script>
         <script src="app/Profile/profile.routes.js"></script>
+        <script src="app/Profile/profile.factory.js"></script>
 
         <!-- Nearby Module -->
         <script src="app/Nearby/nearby.js"></script>
@@ -40,7 +41,7 @@
 
 
     </head>
-    <body ng-app="stayGanu">
+    <body ng-app="stayGanu" ng-controller="rootCtrl as root">
         <ion-nav-bar class="bar-positive">
             <ion-nav-back-button></ion-nav-back-button>
         </ion-nav-bar>
@@ -49,9 +50,9 @@
             <ion-tab title="Homestay" icon-on="ion-ios-home" ui-sref="homestay" icon-off="ion-ios-home-outline">
                 <ion-nav-view name="homestay-tab"></ion-nav-view>
             </ion-tab>
-            <ion-tab title="Nearby" icon-on="ion-ios-location" ui-sref="nearby" icon-off="ion-ios-location-outline">
+            <!-- <ion-tab title="Nearby" icon-on="ion-ios-location" ui-sref="nearby" icon-off="ion-ios-location-outline">
                 <ion-nav-view name="nearby-tab"></ion-nav-view>
-            </ion-tab>
+            </ion-tab> -->
             <ion-tab title="My Stuff" icon-on="ion-ios-albums" ui-sref="profile" icon-off="ion-ios-albums-outline">
                 <ion-nav-view name="profile-tab"></ion-nav-view>
             </ion-tab>
